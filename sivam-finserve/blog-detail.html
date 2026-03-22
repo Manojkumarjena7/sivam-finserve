@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="pageTitle">Blog — Sivam Finserve</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .blog-article { max-width: 760px; margin: 0 auto; }
+    .blog-article-head { margin-bottom: 40px; }
+    .blog-article-head h1 {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 800; color: var(--gray-900); letter-spacing: -.03em;
+      margin-bottom: 16px; line-height: 1.25;
+    }
+    .blog-article-meta {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      font-size: .85rem; color: var(--gray-400); margin-bottom: 28px;
+    }
+    .blog-article-img {
+      height: 260px; border-radius: var(--r-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; margin-bottom: 36px;
+    }
+    .blog-content h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
+      color: var(--gray-900); margin: 36px 0 14px; letter-spacing: -.02em;
+    }
+    .blog-content h3 {
+      font-family: var(--font-display); font-size: 1.15rem; font-weight: 700;
+      color: var(--gray-800); margin: 26px 0 10px;
+    }
+    .blog-content p { font-size: 1rem; color: var(--gray-600); line-height: 1.85; margin-bottom: 16px; }
+    .blog-content ul { margin: 0 0 18px 20px; }
+    .blog-content ul li { font-size: 1rem; color: var(--gray-600); margin-bottom: 8px; line-height: 1.7; }
+    .blog-content ul li::marker { color: var(--brand-green); }
+    .blog-tip {
+      background: var(--brand-green-l); border-left: 4px solid var(--brand-green);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      padding: 16px 20px; margin: 24px 0; font-size: .9rem; color: var(--gray-700);
+    }
+    .blog-tip strong { color: var(--brand-green-d); }
+    .blog-cta-inline {
+      background: linear-gradient(135deg, #060d1f, #1a56db);
+      border-radius: var(--r-lg); padding: 32px; text-align: center;
+      margin: 40px 0; color: white;
+    }
+    .blog-cta-inline h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+    .blog-cta-inline p { color: rgba(255,255,255,.65); font-size: .9rem; margin-bottom: 20px; }
+    .blog-sidebar { position: sticky; top: 88px; }
+    .blog-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 48px; }
+    @media(max-width:900px) { .blog-wrap { grid-template-columns: 1fr; } .blog-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero" style="padding:50px 0 60px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="blog.html">Blog</a><span>/</span><span id="breadcrumbTitle">Article</span></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <div class="blog-wrap">
+      <!-- ARTICLE CONTENT -->
+      <div id="articleContent"></div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+        <div class="card" style="margin-bottom:20px;">
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1rem;margin-bottom:14px;">🚀 Apply for Free</div>
+          <p style="font-size:.875rem;color:var(--gray-500);margin-bottom:16px;">Get personalized guidance and apply for any financial service today — 100% free.</p>
+          <a href="apply.html" class="btn btn-primary btn-full btn-sm">Apply Now →</a>
+          <a href="https://wa.me/919777074636" target="_blank" class="btn btn-wa btn-full btn-sm" style="margin-top:10px;">💬 WhatsApp Me</a>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1rem;margin-bottom:14px;">📚 More Articles</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="blog-detail.html?id=1" style="font-size:.85rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100);padding-bottom:10px;">💳 How to choose the best credit card</a>
+            <a href="blog-detail.html?id=2" style="font-size:.85rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100);padding-bottom:10px;">📊 How to improve your CIBIL score</a>
+            <a href="blog-detail.html?id=3" style="font-size:.85rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100);padding-bottom:10px;">💰 Personal loan vs credit card</a>
+            <a href="blog-detail.html?id=4" style="font-size:.85rem;color:var(--gray-600);">📈 SIP vs Lumpsum for beginners</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Have Questions? I'm Here to Help.</h2>
+    <p>Whatever you read today — I can help you act on it. Message me on WhatsApp for free personal guidance.</p>
+    <div class="cta-btns">
+      <a href="apply.html" class="btn btn-primary btn-lg">Apply Now →</a>
+      <a href="https://wa.me/919777074636" target="_blank" class="btn btn-wa btn-lg">💬 WhatsApp Me</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script src="script.js"></script>
+<script>
+const ARTICLES = {
+  '1': {
+    title: 'How to Choose the Best Credit Card for Your Lifestyle',
+    tag: 'Credit Cards', date: 'January 2025', readTime: '5 min', emoji: '💳',
+    bg: 'linear-gradient(135deg,#eff6ff,#dbeafe)',
+    content: `
+      <h2>Why the "Best" Card Depends on You</h2>
+      <p>There is no single best credit card in India. The right card for you depends entirely on where you spend your money, what lifestyle you lead, and what your income is.</p>
+      <p>Walk into any bank and they'll try to sell you the card with the highest annual fee — because that's what earns them the most. At Sivam Finserve, I do the opposite: I find you the card that saves you the most money.</p>
+
+      <h2>Step 1: Understand Your Spending Patterns</h2>
+      <p>Before applying, track where you spend the most in a month. Most Indians spend primarily on:</p>
+      <ul>
+        <li>Online shopping (Amazon, Flipkart, Myntra)</li>
+        <li>Food delivery (Swiggy, Zomato)</li>
+        <li>Groceries and daily essentials</li>
+        <li>Fuel</li>
+        <li>Travel and dining</li>
+      </ul>
+      <p>Once you know your top spending categories, you can pick a card that gives maximum rewards there.</p>
+
+      <div class="blog-tip"><strong>💡 Pro Tip:</strong> If you spend mostly online, the SBI SimplyCLICK or Amazon Pay ICICI card will give you 10X rewards. If you travel frequently, HDFC Regalia or IndusInd Signature is far better.</div>
+
+      <h2>Step 2: Know Your Eligibility</h2>
+      <p>Most premium credit cards require a monthly salary of ₹50,000 or more. Entry-level cards start from ₹15,000/month salary. Applying for a card you don't qualify for leads to rejection — which can hurt your CIBIL score.</p>
+      <ul>
+        <li><strong>Salary below ₹25K:</strong> Kotak 811, Axis Neo, ICICI Coral</li>
+        <li><strong>Salary ₹25K–₹60K:</strong> SBI SimplyCLICK, Axis ACE, HDFC MoneyBack</li>
+        <li><strong>Salary ₹60K+:</strong> HDFC Regalia, Axis Magnus, IndusInd Platinum</li>
+      </ul>
+
+      <div class="blog-cta-inline">
+        <h3>Not sure which card you qualify for?</h3>
+        <p>Message me with your salary and spending habits — I'll tell you the best card you can get approved for right now.</p>
+        <a href="apply.html?service=Credit+Card" class="btn btn-primary">Apply Free →</a>
+      </div>
+
+      <h2>Step 3: Look at the Real Cost</h2>
+      <p>Annual fees can eat into your benefits. Always calculate: if you spend ₹2,000/month on this card, how much reward value do you get vs how much annual fee do you pay?</p>
+      <p>Many cards with ₹500–₹1,000 annual fees can be waived with minimum annual spend targets. Cards like ICICI Amazon Pay are lifetime free — zero fee ever.</p>
+
+      <h2>Step 4: Check Cashback vs Reward Points</h2>
+      <p>Reward points sound exciting but can be confusing. Cashback cards like Axis ACE (1.5% on everything) are simpler and often more valuable for everyday spenders.</p>
+    `
+  },
+  '2': {
+    title: 'How to Improve Your CIBIL Score Fast — 7 Proven Tips',
+    tag: 'CIBIL Score', date: 'February 2025', readTime: '6 min', emoji: '📊',
+    bg: 'linear-gradient(135deg,#ecfdf5,#d1fae5)',
+    content: `
+      <h2>What is CIBIL Score and Why Does it Matter?</h2>
+      <p>Your CIBIL score is a 3-digit number between 300 and 900. It tells banks how reliable you are as a borrower. A score of 750+ gets you the best credit cards, loan approvals, and lowest interest rates.</p>
+      <p>A score below 650 means most banks will reject your application instantly — without even looking at your income.</p>
+
+      <h2>7 Proven Ways to Improve Your CIBIL Score</h2>
+
+      <h3>1. Pay All EMIs and Credit Card Bills on Time</h3>
+      <p>Payment history is the #1 factor in your score. Even one missed EMI can drop your score by 50–100 points. Set auto-pay reminders or standing instructions on your bank account.</p>
+
+      <h3>2. Keep Credit Utilization Below 30%</h3>
+      <p>If your credit card limit is ₹1 lakh, don't use more than ₹30,000 at a time. High utilization signals financial stress and lowers your score significantly.</p>
+
+      <div class="blog-tip"><strong>💡 Quick Fix:</strong> Ask your bank to increase your credit limit. Your balance stays the same, but your utilization percentage drops — boosting your score within 30 days.</div>
+
+      <h3>3. Don't Apply for Too Many Loans at Once</h3>
+      <p>Every loan or credit card application triggers a "hard inquiry" on your credit report. Too many inquiries in a short time signal desperation and reduce your score by 5–15 points each.</p>
+
+      <h3>4. Maintain Old Credit Accounts</h3>
+      <p>The age of your credit accounts matters. Don't close your oldest credit card even if you don't use it — it's helping your average credit age.</p>
+
+      <h3>5. Diversify Your Credit Mix</h3>
+      <p>Having a mix of secured loans (home, car) and unsecured credit (credit card, personal loan) shows you can handle different types of credit responsibly.</p>
+
+      <h3>6. Check Your CIBIL Report for Errors</h3>
+      <p>Surprisingly, 30% of credit reports have errors. A closed loan showing as "open", or someone else's account linked to yours — these can tank your score unfairly. Check your report free at CIBIL.com.</p>
+
+      <h3>7. Get a Secured Credit Card</h3>
+      <p>If your score is below 600, a secured credit card (backed by FD deposit) is your fastest path to rebuilding credit. Use it monthly and pay in full — your score will improve within 3–6 months.</p>
+
+      <div class="blog-cta-inline">
+        <h3>Want help applying for the right card for your CIBIL score?</h3>
+        <p>I check your eligibility first — so you never get a rejection that hurts your score further.</p>
+        <a href="apply.html?service=Credit+Card" class="btn btn-primary">Check Eligibility Free →</a>
+      </div>
+    `
+  },
+  '3': {
+    title: 'Personal Loan vs Credit Card — When to Use Which?',
+    tag: 'Personal Loans', date: 'February 2025', readTime: '4 min', emoji: '💰',
+    bg: 'linear-gradient(135deg,#fff7ed,#fed7aa)',
+    content: `
+      <h2>The Core Difference</h2>
+      <p>Both let you access money you don't have right now — but they serve very different purposes and carry very different costs.</p>
+      <p>Using the wrong option can cost you thousands of rupees extra in interest.</p>
+
+      <h2>When to Use a Credit Card</h2>
+      <ul>
+        <li>For everyday purchases you can pay off before the due date (0% interest)</li>
+        <li>For online shopping to earn cashback and rewards</li>
+        <li>For small emergency expenses under ₹50,000</li>
+        <li>When you want to split a large purchase into 0% EMI</li>
+      </ul>
+      <div class="blog-tip"><strong>⚠️ Warning:</strong> Never carry a credit card balance month-to-month unless using EMI. The revolving interest rate is 36–42% p.a. — the most expensive debt in India.</div>
+
+      <h2>When to Use a Personal Loan</h2>
+      <ul>
+        <li>For large expenses above ₹1 lakh — medical, wedding, home renovation</li>
+        <li>When you need a fixed EMI for 1–5 years</li>
+        <li>When you want to consolidate existing high-interest debt</li>
+        <li>Interest rate is typically 10.5–18% — much lower than credit card revolving rate</li>
+      </ul>
+
+      <h2>Quick Comparison</h2>
+      <p>Credit card: 0% if paid in full by due date / 36–42% p.a. on outstanding balance. Personal loan: 10.5–20% p.a. fixed.</p>
+      <p>Bottom line: For short-term spending you'll repay quickly — use a credit card. For large amounts with a repayment plan — use a personal loan.</p>
+
+      <div class="blog-cta-inline">
+        <h3>Need help deciding which is right for you?</h3>
+        <p>Message me your situation — I'll tell you what makes the most financial sense for free.</p>
+        <a href="https://wa.me/919777074636" target="_blank" class="btn btn-wa">💬 Ask on WhatsApp</a>
+      </div>
+    `
+  }
+};
+
+// Default article for IDs 4,5,6
+['4','5','6'].forEach(id => {
+  const titles = {
+    '4': ['SIP vs Lumpsum: Which is Better for First-Time Investors?', 'Investment', 'March 2025', '5 min', '📈', 'linear-gradient(135deg,#faf5ff,#e9d5ff)'],
+    '5': ['Why Term Life Insurance Is the Most Important Plan You Don\'t Have', 'Insurance', 'March 2025', '5 min', '🛡️', 'linear-gradient(135deg,#ecfdf5,#a7f3d0)'],
+    '6': ['Best Zero Balance Savings Accounts in India 2025', 'Bank Accounts', 'March 2025', '6 min', '🏦', 'linear-gradient(135deg,#eff6ff,#bfdbfe)']
+  };
+  const t = titles[id];
+  ARTICLES[id] = {
+    title: t[0], tag: t[1], date: t[2], readTime: t[3], emoji: t[4], bg: t[5],
+    content: `<h2>${t[0]}</h2><p>This article is coming soon. In the meantime, feel free to message me directly on WhatsApp for personalized guidance on this topic.</p>
+    <div class="blog-cta-inline"><h3>Get Personal Guidance</h3><p>Skip the reading — just ask me directly. I'll give you the best advice for your situation.</p><a href="https://wa.me/919777074636" target="_blank" class="btn btn-wa">💬 Ask on WhatsApp</a></div>`
+  };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const id = new URLSearchParams(window.location.search).get('id') || '1';
+  const art = ARTICLES[id] || ARTICLES['1'];
+
+  document.getElementById('pageTitle').textContent = art.title + ' — Sivam Finserve';
+  document.getElementById('breadcrumbTitle').textContent = art.tag;
+
+  document.getElementById('articleContent').innerHTML = `
+    <div class="blog-article">
+      <div class="blog-article-head">
+        <div class="blog-tag">${art.tag}</div>
+        <h1>${art.title}</h1>
+        <div class="blog-article-meta">
+          <span>📅 ${art.date}</span>
+          <span>⏱ ${art.readTime} read</span>
+          <span>✍️ Sivam Finserve</span>
+        </div>
+        <div class="blog-article-img" style="background:${art.bg}">${art.emoji}</div>
+      </div>
+      <div class="blog-content">${art.content}</div>
+    </div>`;
+});
+</script>
+</body>
+</html>

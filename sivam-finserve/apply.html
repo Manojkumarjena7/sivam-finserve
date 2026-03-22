@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Now — Sivam Finserve</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .apply-wrap {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start;
+    }
+    .apply-info { position: sticky; top: 88px; }
+    .apply-info h2 {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 800;
+      color: var(--gray-900); margin-bottom: 14px; letter-spacing: -.03em;
+    }
+    .apply-info p { font-size: 1rem; color: var(--gray-500); line-height: 1.75; margin-bottom: 28px; }
+    .apply-feature {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .apply-feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--brand-green-l); display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .apply-feature-text h4 { font-size: .9rem; font-weight: 700; color: var(--gray-900); margin-bottom: 3px; }
+    .apply-feature-text p { font-size: .82rem; color: var(--gray-500); margin: 0; }
+    .apply-contact {
+      margin-top: 28px; padding: 18px; border-radius: var(--r-md);
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+    }
+    .apply-contact p { font-size: .85rem; color: var(--gray-600); margin: 0 0 12px; }
+    .processing-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(8px);
+      z-index: 10001; align-items: center; justify-content: center;
+      flex-direction: column; gap: 20px;
+    }
+    .processing-overlay.show { display: flex; }
+    .proc-spinner {
+      width: 56px; height: 56px; border: 4px solid rgba(255,255,255,.2);
+      border-top: 4px solid var(--brand-green); border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .proc-text {
+      color: white; font-family: var(--font-display); font-size: 1.2rem;
+      font-weight: 700; text-align: center;
+    }
+    .proc-sub { color: rgba(255,255,255,.6); font-size: .875rem; text-align: center; }
+    @media(max-width:768px) { .apply-wrap { grid-template-columns: 1fr; } .apply-info { position: static; } }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero" style="padding:50px 0 60px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Apply Now</div>
+    <h1>Apply for Financial Services</h1>
+    <p>Fill the form below. I'll review and contact you within 30 minutes during business hours.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:52px;">
+  <div class="container">
+    <div class="apply-wrap">
+
+      <!-- LEFT INFO -->
+      <div class="apply-info fade-up">
+        <h2>Free. Fast. Guided by an Expert.</h2>
+        <p>No matter which financial service you need — I take care of the entire application process for you. Just submit this form and relax.</p>
+
+        <div class="apply-feature">
+          <div class="apply-feature-icon">⚡</div>
+          <div class="apply-feature-text"><h4>Quick Response</h4><p>I'll call or WhatsApp you within 30 minutes during working hours (9AM–8PM).</p></div>
+        </div>
+        <div class="apply-feature">
+          <div class="apply-feature-icon">🔒</div>
+          <div class="apply-feature-text"><h4>100% Confidential</h4><p>Your personal details are never shared with anyone except the bank/NBFC you apply with.</p></div>
+        </div>
+        <div class="apply-feature">
+          <div class="apply-feature-icon">💸</div>
+          <div class="apply-feature-text"><h4>Zero Charges</h4><p>This service is completely free. I earn through referral commissions from partners — not from you.</p></div>
+        </div>
+        <div class="apply-feature">
+          <div class="apply-feature-icon">🎯</div>
+          <div class="apply-feature-text"><h4>Best Match Guaranteed</h4><p>I match you to the product with the highest approval probability and best benefits for your profile.</p></div>
+        </div>
+
+        <div class="apply-contact">
+          <p>📞 Prefer to call or message directly?</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="https://wa.me/919777074636?text=Hi!%20I%20want%20to%20apply%20for%20a%20financial%20service." target="_blank" class="btn btn-wa btn-sm">💬 WhatsApp</a>
+            <a href="tel:9777074636" class="btn btn-outline btn-sm">📞 9777074636</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="fade-up">
+        <div class="form-card">
+          <div class="form-title">📋 Application Form</div>
+          <div class="form-sub">Fill all fields for faster processing. Takes less than 2 minutes.</div>
+
+          <form id="applyForm" autocomplete="on">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Ravi Kumar" required/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="10-digit number" maxlength="10" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" placeholder="e.g. Bengaluru" required/>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service...</option>
+                  <optgroup label="Cards & Accounts">
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Bank Account Opening">Bank Account Opening</option>
+                    <option value="Demat Account">Demat Account</option>
+                  </optgroup>
+                  <optgroup label="Loans">
+                    <option value="Personal Loan">Personal Loan</option>
+                    <option value="Car Loan">Car Loan</option>
+                    <option value="Bike Loan">Bike Loan</option>
+                  </optgroup>
+                  <optgroup label="Insurance">
+                    <option value="Health Insurance">Health Insurance</option>
+                    <option value="Life Insurance / LIC">Life Insurance / LIC</option>
+                    <option value="Vehicle Insurance">Vehicle Insurance</option>
+                  </optgroup>
+                  <optgroup label="Investment">
+                    <option value="Mutual Fund / SIP">Mutual Fund / SIP</option>
+                    <option value="Fixed Deposit">Fixed Deposit</option>
+                    <option value="Investment Plans">Investment Plans</option>
+                  </optgroup>
+                  <option value="Not Sure - Need Guidance">Not Sure — Need Guidance</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="income">Monthly Income (Optional)</label>
+                <select id="income" name="income">
+                  <option value="">Select range</option>
+                  <option>Below ₹15,000</option>
+                  <option>₹15,000 – ₹30,000</option>
+                  <option>₹30,000 – ₹60,000</option>
+                  <option>₹60,000 – ₹1,00,000</option>
+                  <option>Above ₹1,00,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="job_type">Employment Type (Optional)</label>
+                <select id="job_type" name="job_type">
+                  <option value="">Select type</option>
+                  <option>Salaried — Private</option>
+                  <option>Salaried — Government</option>
+                  <option>Self-Employed / Business</option>
+                  <option>Freelancer / Gig Worker</option>
+                  <option>Student</option>
+                  <option>Retired</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Any specific requirement? (Optional)</label>
+              <textarea id="message" name="message" placeholder="e.g. I want a lifetime free credit card with cashback on groceries..."></textarea>
+            </div>
+
+            <!-- Consent -->
+            <div style="font-size:.78rem;color:var(--gray-500);margin-bottom:20px;padding:12px;background:var(--gray-50);border-radius:var(--r-sm);">
+              By submitting this form, you agree to be contacted by Sivam Finserve regarding financial products. Your data will not be shared with unauthorized third parties.
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Submit Application
+            </button>
+            <p style="font-size:.78rem;color:var(--gray-400);text-align:center;margin-top:12px;">🔒 Your information is 100% secure and private</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSING OVERLAY -->
+<div class="processing-overlay" id="processingOverlay">
+  <div class="proc-spinner"></div>
+  <div class="proc-text">Processing your request...</div>
+  <div class="proc-sub">Connecting to our partner network. Please wait.</div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script src="script.js"></script>
+<script>
+  // Override apply form to show overlay
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('applyForm');
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      if (!data.name || !data.phone || !data.service) {
+        showToast('⚠️ Please fill all required fields.');
+        return;
+      }
+      // Save lead
+      const leads = JSON.parse(localStorage.getItem('sf_leads') || '[]');
+      leads.push({ ...data, source: 'apply_form', timestamp: new Date().toISOString() });
+      localStorage.setItem('sf_leads', JSON.stringify(leads));
+
+      // Show overlay
+      document.getElementById('processingOverlay').classList.add('show');
+
+      // WhatsApp message
+      const msg = `Hi Sivam Finserve! 🙏\n\nNew Application:\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*City:* ${data.city}\n*Service:* ${data.service}\n*Income:* ${data.income || 'Not specified'}\n*Job:* ${data.job_type || 'Not specified'}\n*Note:* ${data.message || 'None'}`;
+      const waUrl = `https://wa.me/919777074636?text=${encodeURIComponent(msg)}`;
+
+      setTimeout(() => {
+        document.getElementById('processingOverlay').classList.remove('show');
+        window.open(waUrl, '_blank');
+        window.open('https://app.banksathi.com/', '_blank'); // Replace with your referral link
+        showToast('✅ Application submitted! We will contact you within 30 minutes.');
+        form.reset();
+      }, 2000);
+    });
+  });
+</script>
+</body>
+</html>
