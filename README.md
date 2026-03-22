@@ -82,6 +82,13 @@ Location: Bengaluru
 Experience: 3.8 years
 
 ---
+## Project Preview
+
+Main landing page of the platform showing services and offers.
+
+![Sivam Finserve UI](./screenshots/sivam-finserve-ui.png)
+
+
 
 ## Note
 
