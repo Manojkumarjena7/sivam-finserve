@@ -7,7 +7,7 @@ const NAV_HTML = `
 <nav class="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="Sivam Finserve Logo">
+      <img src="assets/logo.png">
       <div>
         <div class="nav-logo-text">SIVAM <span>FINSERVE</span></div>
         <div class="nav-logo-powered">Powered by SivamTech</div>
