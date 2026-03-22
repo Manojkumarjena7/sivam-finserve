@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Sivam Finserve</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-info-stack { display: flex; flex-direction: column; gap: 16px; }
+    .contact-card {
+      display: flex; gap: 16px; align-items: center;
+      background: white; border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); padding: 20px 22px;
+      box-shadow: var(--shadow-xs); text-decoration: none;
+      transition: transform var(--t-mid), box-shadow var(--t-mid), border-color var(--t-mid);
+    }
+    .contact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--brand-green); }
+    .cc-icon {
+      width: 50px; height: 50px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+    .cc-label { font-size: .75rem; color: var(--gray-400); font-weight: 500; margin-bottom: 3px; text-transform: uppercase; letter-spacing: .05em; }
+    .cc-value { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gray-900); }
+    .cc-sub { font-size: .8rem; color: var(--gray-500); margin-top: 2px; }
+    .hours-card {
+      background: linear-gradient(135deg, #060d1f, #1a56db);
+      border-radius: var(--r-lg); padding: 24px;
+      color: white; margin-top: 4px;
+    }
+    .hours-card h4 { font-family: var(--font-display); font-weight: 700; margin-bottom: 14px; }
+    .hours-row { display: flex; justify-content: space-between; font-size: .875rem; margin-bottom: 8px; color: rgba(255,255,255,.8); }
+    .hours-row span:last-child { color: var(--brand-green); font-weight: 600; }
+    @media(max-width:768px) { .contact-wrap { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <h1>Get in Touch</h1>
+    <p>WhatsApp, call, or fill the form below. I usually respond within 30 minutes during business hours.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <!-- LEFT: Contact Info -->
+      <div class="fade-up">
+        <div class="section-label" style="font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-green);margin-bottom:10px;">Contact Details</div>
+        <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;letter-spacing:-.03em;color:var(--gray-900);margin-bottom:8px;">Let's Talk Finance</h2>
+        <p style="font-size:.95rem;color:var(--gray-500);margin-bottom:28px;line-height:1.75;">Whether you have a question, need help choosing a service, or want to apply — I'm here to help. Reach me any way that's convenient.</p>
+
+        <div class="contact-info-stack">
+          <a href="https://wa.me/919777074636?text=Hi!%20I%20need%20help%20from%20Sivam%20Finserve." target="_blank" class="contact-card">
+            <div class="cc-icon" style="background:#ecfdf5;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#10b981"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.858L.073 23.74a.5.5 0 0 0 .598.65l6.07-1.594A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.99 0-3.86-.548-5.463-1.5l-.374-.222-3.874 1.017 1.035-3.77-.244-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">WhatsApp (Fastest)</div>
+              <div class="cc-value">+91 9777074636</div>
+              <div class="cc-sub">Click to open chat →</div>
+            </div>
+          </a>
+
+          <a href="tel:9777074636" class="contact-card">
+            <div class="cc-icon" style="background:#eff6ff;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.47 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.09 6.09l1.09-1.09a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">Direct Phone Call</div>
+              <div class="cc-value">9777074636</div>
+              <div class="cc-sub">Mon – Sat, 9AM – 8PM</div>
+            </div>
+          </a>
+
+          <a href="mailto:sivamfinserve@gmail.com" class="contact-card">
+            <div class="cc-icon" style="background:#fff7ed;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">Email</div>
+              <div class="cc-value">sivamfinserve@gmail.com</div>
+              <div class="cc-sub">Reply within 12–24 hours</div>
+            </div>
+          </a>
+
+          <div class="contact-card" style="cursor:default;">
+            <div class="cc-icon" style="background:#f0fdfa;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">Location</div>
+              <div class="cc-value">Near Marathahalli Multiplex</div>
+              <div class="cc-sub">Bengaluru, Karnataka – 530067</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hours-card" style="margin-top:20px;">
+          <h4>⏰ Working Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>10:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:12px;">WhatsApp messages are monitored and answered on all days.</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="fade-up">
+        <div class="form-card">
+          <div class="form-title">Send a Message</div>
+          <div class="form-sub">I'll get back to you on WhatsApp or call within 30 minutes during working hours.</div>
+          <form id="contactForm" autocomplete="on">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name *</label>
+                <input type="text" name="name" placeholder="Full name" required/>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="phone" placeholder="10-digit number" maxlength="10" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Service Interested In</label>
+              <select name="service">
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Personal Loan">Personal Loan</option>
+                <option value="Bank Account Opening">Bank Account Opening</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Investment Plans">Investment Plans</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Message *</label>
+              <textarea name="message" placeholder="Tell me what you need help with..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              Send Message →
+            </button>
+            <p style="font-size:.78rem;color:var(--gray-400);text-align:center;margin-top:12px;">Message opens in WhatsApp for instant delivery</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
