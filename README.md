@@ -89,7 +89,6 @@ Main landing page of the platform showing services and offers.
 ![Sivam Finserve UI](./screenshots/sivam-finserve-ui.png)
 
 
-
 ## Note
 
 This is a frontend concept project. Final approval of any financial product depends on the respective banks and institutions.
